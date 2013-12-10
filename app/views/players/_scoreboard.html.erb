@@ -1,0 +1,15 @@
+<ul class="small-block-grid-3">
+<% Player.all.each do |player| %>
+  <li>
+    <ul class="pricing-table">
+      <li class="title"><%= player.name %></li>
+      <li class="price"><%= player.account %></li>
+      <% if @question && !@question.answered %>
+         <li class="cta-button">
+          <%= link_to 'Ok', answer_question_url(@question, player_id: player.id, success: true), method: :post, class: 'success button' %>
+          <%= link_to 'Fail', answer_question_url(@question, player_id: player.id), method: :post, class: 'alert button' %></li>
+      <% end %>
+    </ul>
+  </li>
+<% end %>
+</ul>

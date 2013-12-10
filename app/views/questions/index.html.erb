@@ -1,0 +1,18 @@
+<table width="100%">
+<% @questions.group_by(&:topic).each do |topic, questions| %>
+<tr>
+  <th><%= topic %></th>
+  <% questions.each do |question| %>
+    <td>
+    <% if !question.answered %>
+    <div class="panel callout">
+      <h3><%= link_to question.cost, question %></h3>
+    </div>
+    <% end %>
+    </td>
+  <% end %>
+</tr>
+<% end %>
+</table>
+<hr/>
+<%= render partial: 'players/scoreboard' %>

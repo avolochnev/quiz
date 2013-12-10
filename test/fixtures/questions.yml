@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  topic: MyString
+  cost: 1
+  q: MyText
+  a: MyText
+  answered: false
+
+two:
+  topic: MyString
+  cost: 1
+  q: MyText
+  a: MyText
+  answered: false

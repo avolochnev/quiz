@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<h3><%= @question.topic %> <small><%= @question.cost %></small></h3>
+
+<blockquote><h1><%= @question.q %></h1></blockquote>
+
+<hr/>
+<%= render partial: 'players/scoreboard' %>
+
+<%= link_to 'Никто не знает', nobody_knows_question_url(@question), method: :post, class: 'appearing button' %>
+
